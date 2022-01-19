@@ -1,0 +1,19 @@
+.Header {
+  height: 19%;
+  width: 100%;
+}
+.div-mainlogo {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  height: 100%;
+  width: 50%;
+}
+@media screen and (max-width: 640px) {
+  .Header {
+    margin-top: 5%;
+  }
+}

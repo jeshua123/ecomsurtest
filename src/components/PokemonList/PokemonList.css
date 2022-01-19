@@ -1,0 +1,72 @@
+.div-content {
+  height: 75%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.card {
+  height: 145px;
+  border: solid 0.1px rgb(0, 64, 139);
+  border-radius: 3%;
+}
+.div-image {
+  height: 80%;
+  width: 100%;
+  background-color: rgb(240, 238, 233);
+}
+.image-logo {
+  height: 100%;
+  width: 100%;
+}
+.pokemon-image {
+  height: 80%;
+  width: 100%;
+}
+.div-image-info p {
+  margin: 3% 0 0 0;
+  text-align: center;
+}
+.div-inputsearch {
+  height: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.div-inputsearch-box {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+}
+.inputsearch {
+  height: 60%;
+  width: 60%;
+  padding: 10px;
+  display: block;
+  border: none;
+  background-color: rgb(238, 238, 240);
+  border-radius: 14px;
+}
+.icon {
+  font-size: 20px;
+  color: rgb(0, 64, 139);
+  margin: 10px;
+}
+
+@media screen and (max-width: 640px) {
+  .div-inputsearch-box {
+    padding-left: 15%;
+  }
+  .div-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    overflow: scroll;
+    height: 100%;
+  }
+  .div-inputsearch {
+    margin-bottom: 5%;
+  }
+}
