@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getAllPokemons } from '../../utils/Api';
+import PageButtom from '../Header/PageButtom';
 import PokemonCard from '../shared/PokemonCard';
 import './PokemonList.css';
 
@@ -12,6 +13,7 @@ function PokemonList() {
     const pokemonRequest = await getAllPokemons()
     setPokemonList(pokemonRequest.results)
     setPokemonListToRender(pokemonRequest.results)
+    console.log(pokemonRequest.next, pokemonRequest.previous)
   }
   const handleChange = (event) => {
     const word = event.target.value
@@ -29,11 +31,12 @@ function PokemonList() {
 
   return (
     <>
-      <div className='div-inputsearch'>
+      <div className='div-nav-bar'>
         <div className="div-inputsearch-box">
           <input type="search" value={filterWord} id="" className="inputsearch" onChange={handleChange} />
           <i class="fa fa-search icon"></i>
         </div>
+        <PageButtom />
       </div>
       <div className="div-content">
         {pokemonListToRender.map((pokemon, index) => {

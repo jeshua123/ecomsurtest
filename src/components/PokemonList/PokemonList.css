@@ -6,7 +6,7 @@
   gap: 2rem;
 }
 .card {
-  height: 145px;
+  height: 150px;
   border: solid 0.1px rgb(0, 64, 139);
   border-radius: 3%;
 }
@@ -27,26 +27,25 @@
   margin: 3% 0 0 0;
   text-align: center;
 }
-.div-inputsearch {
-  height: 5%;
+/* -----------------search-----------*/
+.div-nav-bar {
+  height: 15%;
+  width: 100%;
+}
+.div-inputsearch-box {
+  height: 50%;
   width: 100%;
   display: flex;
   justify-content: center;
-}
-.div-inputsearch-box {
-  height: 100%;
-  width: 50%;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  padding-left: 5%;
 }
 .inputsearch {
-  height: 60%;
-  width: 60%;
+  height: 50%;
+  width: 30%;
   padding: 10px;
   display: block;
   border: none;
+  margin-left: 10%;
   background-color: rgb(238, 238, 240);
   border-radius: 14px;
 }
@@ -55,10 +54,48 @@
   color: rgb(0, 64, 139);
   margin: 10px;
 }
+/* -----------------search-----------*/
+
+/* -------------------------paginacion --------------- */
+ul.pagination {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+ul.pagination li {
+  display: inline;
+}
+
+ul.pagination li a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+}
+
+ul.pagination li a.active {
+  background-color: #4caf50;
+  color: white;
+  border: 1px solid #4caf50;
+}
+
+ul.pagination li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+div.center {
+  text-align: center;
+  margin-left: 8%;
+}
+
+/* -------------------------paginacion --------------- */
 
 @media screen and (max-width: 640px) {
   .div-inputsearch-box {
-    padding-left: 15%;
+    padding-left: 6%;
   }
   .div-content {
     grid-template-columns: repeat(2, 1fr);
@@ -66,7 +103,15 @@
     overflow: scroll;
     height: 100%;
   }
+  .card {
+    height: 130px;
+  }
+
   .div-inputsearch {
     margin-bottom: 5%;
+  }
+
+  ul.pagination li a {
+    padding: 8px 8px;
   }
 }

@@ -12,8 +12,12 @@
   height: 100%;
   width: 50%;
 }
+
 @media screen and (max-width: 640px) {
   .Header {
     margin-top: 5%;
+  }
+  .logo {
+    width: 100%;
   }
 }
