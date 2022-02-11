@@ -1,0 +1,119 @@
+.div-main-profile {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.div-profile-card {
+  background-color: rgb(209, 225, 255);
+  border: 20px solid rgb(92, 166, 255);
+  width: 40%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 3%;
+}
+.div-img-container {
+  background-color: WHITE;
+  width: 100%;
+  height: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+.div-img {
+  width: 60%;
+  height: 60%;
+  border-radius: 100%;
+}
+.div-img img {
+  width: 100%;
+  height: 100%;
+}
+.div-profileinfo {
+  width: 100%;
+  height: 35%;
+  text-align: center;
+}
+table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+table,
+td,
+th {
+  border: 1px solid black;
+}
+
+
+
+/* -----------------loading------------*/
+.div-pokeball-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}  
+.pokeball{
+  height: 250px;
+  width: 250px;
+  border: 13px solid #383b4f;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    #f51939 125px,
+    white 125px
+  );
+  position: relative;
+  animation: load 2s infinite ;
+}
+@keyframes load{
+  50%{
+    transform: scale(0.7);
+  }
+}
+.pokeball::before{
+  position: absolute;
+  content:"" ;
+  height: 25px;
+    width: 250px;
+    background-color: #383b4f;
+    top: 112.5px;
+
+}
+.pokeball::after{
+  position: absolute;
+  content:"" ;
+  height: 90px;
+    width: 90px;
+background-image: radial-gradient(
+  #ffffff 0px ,#ffffff 10px,
+  #383b4f 10px ,#383b4f 15px,
+  #ffffff 15px , #ffffff 32px,
+  #383b4f 15px
+
+);
+border-radius: 50%;
+top: 80px;
+left: 80px;
+
+}
+/* -----------------loading------------*/
+
+
+
+@media screen and (max-width: 640px) {
+  .div-profile-card {
+    width: 70%;
+    height: 70%;
+  }
+}

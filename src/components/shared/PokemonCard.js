@@ -1,7 +1,12 @@
 import React from 'react';
 
-function PokemonCard({ pokemon, pokemonId }) {
-  return (<div className="card" >
+function PokemonCard({ pokemon, pokemonId, setpokemonIdchoosed, setDisplayModalTrigger }) {
+  const handleClick = () => {
+    setpokemonIdchoosed(pokemonId);
+    setDisplayModalTrigger(true)
+
+  }
+  return (<div onClick={handleClick} className="card" >
     <div className="div-image">
       <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pokemonId}.png`} alt="" srcset="" className="pokemon-image" />
     </div>
