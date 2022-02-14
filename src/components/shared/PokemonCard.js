@@ -6,9 +6,9 @@ function PokemonCard({ pokemon, pokemonId, setpokemonIdchoosed, setDisplayModalT
     setDisplayModalTrigger(true)
 
   }
-  return (<div onClick={handleClick} className="card" >
+  return (<div onClick={handleClick} className="card"  >
     <div className="div-image">
-      <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pokemonId}.png`} alt="" srcset="" className="pokemon-image" />
+      <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pokemonId}.png`} alt="" className="pokemon-image" />
     </div>
     <div className="div-image-info">
       <p>{pokemon.name}</p>

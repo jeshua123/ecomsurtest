@@ -27,16 +27,16 @@ function PageButtom({ handleClick, pageNumber }) {
 
 
   return <>
-    <div class="div-page-box">
-      <div class="center">
-        <ul class="pagination">
+    <div className="div-page-box">
+      <div className="center">
+        <ul className="pagination">
           <li onClick={handleClickPreviousPages}><a href="#">«</a></li>
 
 
           {pagesshowed.map((page) => {
 
 
-            if (page > 0) { return (<li onClick={() => handleClick(page)}><a href="#" class={`${null}`} >{page}</a></li>) }
+            if (page > 0) { return (<li onClick={() => handleClick(page)}><a href="#" className={`${null}`} >{page}</a></li>) }
           }
           )
 
