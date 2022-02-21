@@ -33,14 +33,7 @@ function PageButtom({ handleClick, pageNumber }) {
           <li onClick={handleClickPreviousPages}><a href="#">«</a></li>
 
 
-          {pagesshowed.map((page) => {
-
-
-            if (page > 0) { return (<li onClick={() => handleClick(page)}><a href="#" className={`${null}`} >{page}</a></li>) }
-          }
-          )
-
-          }
+          {pagesshowed.map((page) => { if (page > 0) { return (<li onClick={() => handleClick(page)}><a href="#" className={`${null}`} >{page}</a></li>) } })}
           <li onClick={handleClickNextPages} ><a href="#">»</a></li>
         </ul>
       </div>

@@ -14,11 +14,18 @@ export const getAPokemonProfile = async (id) => {
   return jsonResponse
 };
 export const getSearchPokemon = async (id) => {
-  try {
-    const request = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`, { headers })
+  const request = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`, { headers })
+  if (request.ok) {
     const jsonResponse = await request.json()
     return jsonResponse
-  } catch (error) {
-    console.log("no sirve ");
   }
+  return { name: "fetch error", request, json: await tryJson(request) }
 };
+export const tryJson = async (res) => {
+  try {
+    return await res.json()
+  } catch (e) {
+    return null
+  }
+}
+

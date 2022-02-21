@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getAPokemonProfile } from '../../utils/Api';
 import Loading from './Loading';
-
-
 import './pokemon.css';
 
 function PokemonProfile({ setDisplayModalTrigger, setpokemonIdchoosed, pokemonIdchoosed }) {
@@ -36,7 +34,9 @@ function PokemonProfile({ setDisplayModalTrigger, setpokemonIdchoosed, pokemonId
 
           <div className="div-img-container">
             <div className="div-img">
-              <img src={`${pokemon?.sprites.other["official-artwork"].front_default}`} alt="" srcset="" />
+              <img id="imagen" src={`${pokemon?.sprites.other["official-artwork"].front_default}`} alt="" srcset="" />
+
+
             </div>
           </div>
           <div className="div-profileinfo">
