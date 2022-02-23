@@ -25,7 +25,7 @@ function PokemonCardFiltered({ pokemon, setpokemonIdchoosed, setDisplayModalTrig
       </div>
       <div className="div-error-button">
 
-        <button className="error-button" onClick={handleClickButton}><span>←</span>  Go Back Home </button>
+        <button className="error-button" onClick={handleClickButton}><span>←</span> Back Home </button>
 
       </div >
     </>

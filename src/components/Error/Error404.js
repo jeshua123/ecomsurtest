@@ -16,7 +16,7 @@ function Error404({ setDisplayError404Trigger, setsearchedpokemon }) {
           <img src={`${error}`} alt="" className="error-image" />
         </div>
         <div className="div-error-button">
-          <button className="error-button" onClick={handleClick}>  <span>←</span>  Go Back Home  </button>
+          <button className="error-button" onClick={handleClick}><span>←</span> Back Home</button>
         </div>
       </div>
     </div>
